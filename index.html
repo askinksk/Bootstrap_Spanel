@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+  <title>Bootstrap demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+   <link rel="stylesheet" href="assets/Plugins/bootstrapv5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/Plugins/fontawesome63/css/fontawesome.min.css">
+   <link rel="stylesheet" href="assets/spanel/css/spanel.css">
+   
+  
+  </head>
+  <body>
+    <div id="wrap" class="sidebar-active">
+		<div class="sidebar">
+			<div class="sidebar-header">
+				<strong>S</strong>panel
+			</div><!--sidebar header div end -->
+			<div class="sidebar-profile text-center">
+				<img src="assets/spanel/img/user.png" class="img-fluid, mx-auto d-block, rounded-circle"  alt="">
+				<div class="user-name">Aşkın Kesik</div>
+				<div class="user-role">Stajyer</div>
+				
+				<div class="btn-group" role="group" aria-label="Basic example">
+  <a href="#" class="btn data-toggle="tooltip" data-placement="top" title="Parola İşlemleri"><i class="fa fa-key"></i></a>
+  <a href="#" class="btn data-toggle="tooltip" data-placement="top" title="Profil İşlemleri"><i class="fa fa-user"></i></a>
+	</div>
+			</div><!--sidebar profil div end-->
+			
+	<div class="sidebar-nav">
+	<ul class="nav flex-column" id="sidebarnav">
+  <li class="nav-item  active">
+    <a class="nav-link" href="#">Spanel
+	<span class="detail">Dashboard</span></a>
+	<i class="fa fa-dashboard"></i>
+  </li>
+  <li class="nav-item no-detail">
+    <a class="nav-link" href="#">Link</a>
+	<i class="fa fa-dashboard"></i>
+  </li>
+  <li class="nav-item no-detail">
+    <a class="nav-link" href="#">Link</a>
+	<i class="fa fa-dashboard"></i>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled
+	<span class="detail">No click</span>
+	</a>
+	<i class="fa fa-dashboard"></i>
+  </li>
+  
+		<li class="nav-item submenu">
+			    <a class="nav-link" data-bs-toggle="collapse" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+				  Sub Menü
+				  <span class="detail">Dashboard</span>
+				</a>
+				<i class="fa fa-dashboard"></i>
+				<i class="clearfix"></i>
+			<ul id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#sidebarnav">
+				<li>
+					<a href="#">Sub Menu İtem</a>
+				</li>
+				<li>
+					<a href="#">Sub Menu İtem</a>
+				</li>
+				<li>
+					<a href="#">Sub Menu İtem</a>
+				</li>
+			</ul>	
+		</li>
+		
+		<li class="nav-item submenu">
+			    <a class="nav-link" data-bs-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+				 Sub Menü
+				  <span class="detail">Dashboard</span>
+				</a>
+				<i class="fa fa-dashboard"></i>
+				<i class="clearfix"></i>
+			<ul id="collapse2" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#sidebarnav">
+				<li>
+					<a href="#">Sub Menu İtem</a>
+				</li>
+				<li>
+					<a href="#">Sub Menu İtem</a>
+				</li>
+				<li>
+					<a href="#">Sub Menu İtem</a>
+				</li>
+			</ul>	
+		</li>
+</ul>
+</div>	<!--sidebar nav div end-->
+		
+		</div> <!-- sidebar div end -->
+		<div class="header">
+			<div class="wrapper">
+  <button class="effect1">
+    <span class="active"></span>
+  </button>
+</div>
+		
+		</div>	<!-- header div end -->
+		<div class="content">
+		content
+		</div> <!-- content div end
+	</div> <!-- wrap div end -->
+	<script src="assets/Plugins/jquery363/jquery-363.min.js"></script>
+  <!-- <script src="assets/Plugins/bootstrapv5.3/js/bootstrap.min"></script> -->
+   <script>
+		$('button.effect1').on('click',function(){
+		$('.sidebar').animate({width:'toggle'},0);
+  $(this).find('span').toggleClass('active');
+});
+	var sidebarstatus = $('#wrap').hasClass('sidebar-active');
+	if (sidebarstatus == true){ 
+	$('#wrap').removeClass('sidebar-active');//sidebar active duyurusunu siler
+	}
+	else{
+	$('#wrap').addClass('sidebar-active');
+	}
+	
+	function menu(){
+	if ((window).width()>768)
+	{
+	$('.sidebar').show();
+	}
+	else
+	{
+	$('.sidebar').hide();
+	$('#wrap').removeClass('sidebar-active');// sidebar-active kaldır
+	$('.span').removeClass('active');
+	}
+	
+	
+		$(document).ready(function() {
+		menu();
+		});//sayfa yüklendiğinde menu fonksiyonunu çağır
+	}
+	
+	(window).onresize = function(event) {
+	menu();
+	}
+	
+	
+	
+   </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+body{font-family: sans-serif;}
+.btn:focus,.btn:active{outline: none !important; box-shadow: none !important;}
+
+
+.sidebar{background-color: #2b303b; width: 250px; height:100%; position: fixed; color:#fff; text-align:center}
+.sidebar-header{background-color: #272b35; border-bottom: 1px solid #232730; height: 60px; line-height:60px; text-align:center; font-size: 30px;}
+.sidebar-profile{border-bottom: 1px solid #232730; font-size: 12px; padding: 10px 0; height: 160px;}
+.sidebar-profile img{max-height: 70px; max-width: 70px;}
+.sidebar-profile .btn-group{width: 85%;}
+.sidebar-profile .btn{margin-top: 1px; text-align: center; color:#fff; background-color: #272b35; width: 49%; border: 1px solid #232730}
+.sidebar-profile .btn:hover{cursor: pointer;}/*Üstüne gelindiğinde*/
+
+
+.sidebar-nav{padding: 7px 0;}
+.sidebar-nav ul{list-style-type: none; padding-left:0px;}
+.sidebar-nav ul li{border-right: 2px solid transparent;}
+.sidebar-nav ul li a{float:left; color:#fff; font-size:14px; display:inline-block; padding-bottom:0px; padding-top:0px;}
+.sidebar-nav ul .no-detail a{line-height: 40px;}
+.sidebar-nav .detail{display:block; font-size:12px; color: rgba(255,255,255,.5); text-align:left;}
+.sidebar-nav ul li .fa{float:right; margin-right: 10px; background-color:#21252d; width:35px; height:35px; color:#788195; text-align:center; line-height:35px;  font-size:14px;margin-bottom:-15px;}
+.sidebar-nav ul li a:hover{cursor:pointer;}
+.sidebar-nav .active,.sidebar-nav li:hover{border-right: 2px solid #dc3545;}
+.sidebar-nav .active .fa,.sidebar-nav li:hover .fa{color:#fff; background-color: #dc3545;}
+
+.sidebar-nav .submenu ul{background-color:#272b35; margin:0 !important; pa,:0 !important; margin-top: 5px !important;}
+.sidebar-nav .submenu ul li {list-style-type:none !important;  text-align: left !important;}
+.sidebar-nav .submenu ul li a{float: none !important; text-decoration:none; padding: 7px 0 7px 12px; font-size:12px; width:100%;}
+.sidebar-nav .submenu ul li a:hover{background-color:#dc3545;}
+.sidebar-nav .submenu .show{border-right:2px solid #dc3545;}
+
+
+.header{height:85px; background-color: #fff; border-bottom: 1px solid rgba(230,230,230,0.7);}
+.content{min-height: 600px;}
+
+.sidebar-active .header, .sidebar-active .content{margin-left: 250px;}
+
+
+
+/*Hamburger icon*/
+.wrapper{
+  max-width:800px;
+  width:100%;
+}
+
+button {
+  width:35px;
+  background:transparent;
+  border:none;
+  height:35px;
+  padding:0px;
+  overflow:hidden;
+}
+
+button:focus{
+  outline:none;
+}
+
+.effect1 span{
+  display:inline-block;
+  width:80%;
+  height:3px;
+  background:#aaa;
+  position:relative;
+  transition:all .2s;
+}
+
+.effect1 span:before,
+.effect1 span:after{
+  content:'';
+  position:absolute;
+  width:100%;
+  background:#aaa;
+  height:3px;
+  left:0px;
+  transition:all .3s;
+}
+
+.effect1 span:before{
+  top:7px;
+}
+
+.effect1 span:after{
+  bottom:7px;
+}
+
+button.effect1:hover span:after{
+  left:-5px;
+}
+
+button.effect1:hover span:before{
+  left:5px;
+}
+
+button.effect1 span.active{
+  background:#aaa;
+}
+
+button.effect1 span.active:after,
+button.effect1 span.active:before{
+  top: 0px;
+  left: 0px;
+}
+
+button.effect1 span.active:after{
+  transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+}
+
+button.effect1 span.active:before{
+  transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+}
